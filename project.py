@@ -12,10 +12,11 @@ def verify_api_key():
     if user_api_key !=VALID_API_KEY:
         print("INVALID CREDENTIAL")
         return False
-    return True
+    return True1
+    
 
 def search_word(word):
-    url=" https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
+    url="https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
     response=requests.get(url)
     
     if response.status_code==200:
@@ -101,7 +102,7 @@ def main():
             view_words()
 
         elif choice=="3":
-            word_id=int(input("Enter ID to update"))
+            word_id=int(input("Enter ID to update: "))
             update_word(word_id,new_word)
 
         elif choice=="4":

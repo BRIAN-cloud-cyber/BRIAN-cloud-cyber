@@ -8,6 +8,7 @@ saved_words = []  # where saved words will be stored
 # checking for correct entries
 def verify_api_key():
     global user_api_key
+    print(f"DEBUG: user_api_key is '{user_api_key}' (Expected: '{VALID_API_KEY}')")
     if user_api_key != VALID_API_KEY:
         print("INVALID CREDENTIAL")
         return False
@@ -87,6 +88,7 @@ def main():
     print("Welcome to Smart Dictionary API Tool")
 
     user_api_key = input("Enter Your API Key: ")
+    print(f"DEBUG: user_api_key is '{user_api_key}' (Expected: '{VALID_API_KEY}')")
 
     while True:
         print("\n--- Menu ---")
